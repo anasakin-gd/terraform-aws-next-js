@@ -93,6 +93,11 @@ variable "cloudwatch_logs_retention_in_days" {
 # IAM Policies
 ##############
 
+variable "lambda_role_permissions_boundary" {
+  type    = string
+  default = null
+}
+
 variable "attach_policy_jsons" {
   description = "Controls whether policy_jsons should be added to IAM role for Lambda Function."
   type        = bool
